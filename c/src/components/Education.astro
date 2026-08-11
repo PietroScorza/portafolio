@@ -1,0 +1,94 @@
+---
+import { education } from '../data/portfolioData';
+import { GraduationCap } from 'lucide-react';
+---
+
+<section id="educacion" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        Formación <span class="gradient-text">Académica</span>
+      </h2>
+      <p class="text-text-secondary max-w-xl mx-auto">
+        Mi trayectoria formativa en tecnología e ingeniería informática.
+      </p>
+    </div>
+
+    <!-- Education grid -->
+    <div class="grid gap-6">
+      {
+        education.map((edu, index) => (
+          <div
+            class="card-base p-6 md:p-8 group relative overflow-hidden"
+            style={`animation-delay: ${index * 150}ms;`}
+          >
+            {/* Gradient accent */}
+            <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent-cyan to-accent-violet rounded-l-xl" />
+
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              {/* Icon */}
+              <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-accent-cyan/10 to-accent-violet/10 border border-accent-cyan/20 flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-accent-cyan"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+
+              {/* Content */}
+              <div class="flex-1">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
+                  <h3 class="text-lg font-bold text-text-primary">{edu.title}</h3>
+                  <span class="text-xs font-medium px-3 py-1 rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 w-fit">
+                    {edu.period}
+                  </span>
+                </div>
+                <p class="text-sm text-accent-violet font-medium mb-1">{edu.institution}</p>
+                <p class="text-sm text-text-secondary">
+                  {edu.status === 'Actualmente cursando — 2º año' ? (
+                    <span class="inline-flex items-center gap-1.5">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75" />
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-green" />
+                      </span>
+                      {edu.status}
+                    </span>
+                  ) : (
+                    <span class="inline-flex items-center gap-1.5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="text-accent-green"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {edu.status}
+                    </span>
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

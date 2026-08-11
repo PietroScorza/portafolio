@@ -1,0 +1,91 @@
+---
+import { profileData } from '../data/portfolioData';
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background effects -->
+  <div class="absolute inset-0 bg-grid opacity-40"></div>
+  <div
+    class="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-accent-cyan/10 blur-[120px] animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-accent-violet/10 blur-[120px] animate-pulse"
+    style="animation-delay: 1s;"
+  >
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <!-- Status badge -->
+    <div
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-green/30 bg-accent-green/5 mb-8 animate-fade-in"
+    >
+      <span class="relative flex h-2.5 w-2.5">
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"
+        ></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-green pulse-green"
+        ></span>
+      </span>
+      <span class="text-sm font-medium text-accent-green">{profileData.status}</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+      <span class="block text-text-primary">Hola, soy</span>
+      <span class="gradient-text">{profileData.name}</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto mb-4">
+      {profileData.role}
+    </p>
+    <p class="text-sm sm:text-base text-text-muted max-w-xl mx-auto mb-10">
+      {profileData.bio.currentYear} en la {profileData.bio.university} ·{' '}
+      {profileData.bio.graduated}
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="#experiencia"
+        id="cta-experience"
+        class="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-accent-cyan to-accent-violet text-white font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent-cyan/25 hover:scale-105"
+      >
+        <span>Ver Experiencia</span>
+        <svg
+          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      <a
+        href="#contacto"
+        id="cta-contact"
+        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-dark-border bg-dark-card/50 text-text-primary font-semibold text-sm hover:border-accent-cyan/50 hover:bg-dark-card transition-all duration-300 hover:scale-105"
+      >
+        Contactar
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div
+        class="w-6 h-10 rounded-full border-2 border-text-muted/30 flex items-start justify-center pt-2"
+      >
+        <div
+          class="w-1 h-2.5 rounded-full bg-accent-cyan animate-bounce"
+          style="animation-duration: 1.5s;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

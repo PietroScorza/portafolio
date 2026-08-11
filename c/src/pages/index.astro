@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.jsx';
+import Hero from '../components/Hero.astro';
+import TerminalWidget from '../components/TerminalWidget.jsx';
+import ExperienceTimeline from '../components/ExperienceTimeline.jsx';
+import TechStack from '../components/TechStack.jsx';
+import Education from '../components/Education.astro';
+import ContactSection from '../components/ContactSection.jsx';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar client:load />
+  <main>
+    <Hero />
+    <TerminalWidget client:visible />
+    <ExperienceTimeline client:visible />
+    <TechStack client:visible />
+    <Education />
+    <ContactSection client:visible />
+  </main>
+  <Footer />
+</Layout>

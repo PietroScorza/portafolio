@@ -1,36 +1,24 @@
-node_modules/
 # build output
 dist/
-c/dist/
 # generated types
 .astro/
-c/.astro/
 
 # dependencies
 node_modules/
-c/node_modules/
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-c/npm-debug.log*
-c/yarn-debug.log*
-c/yarn-error.log*
-c/pnpm-debug.log*
 
 
 # environment variables
 .env
 .env.production
-c/.env
-c/.env.production
 
 # macOS-specific files
 .DS_Store
-c/.DS_Store
 
 # jetbrains setting folder
 .idea/
-c/.idea/
