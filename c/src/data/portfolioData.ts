@@ -27,8 +27,8 @@ export const profileData = {
   role: 'Estudiante de Ingeniería Informática & Desarrollador Full Stack',
   tagline: 'DAM + Ingeniería Informática',
   location: 'España',
-  email: 'pietroscorza@gmail.com',
-  linkedin: 'https://linkedin.com/in/pietroscorza',
+  email: 'pietroscorzafernandez@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/pietro-scorza-fernandez-b998613b5/',
   github: 'https://github.com/PietroScorza',
   status: 'Disponible para Teletrabajo / Remoto',
   objective:

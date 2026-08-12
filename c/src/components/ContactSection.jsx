@@ -52,6 +52,8 @@ export default function ContactSection() {
     },
   ];
 
+  const cvDownloadUrl = `${import.meta.env.BASE_URL}cv-pietro-scorza.pdf`;
+
   return (
     <section id="contacto" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 relative">
       {/* Background glow */}
@@ -151,7 +153,7 @@ export default function ContactSection() {
 
             {/* CV Download */}
             <a
-              href="/cv-pietro-scorza.pdf"
+                href={cvDownloadUrl}
               download
               className="card-base p-5 flex items-center gap-4 group"
             >
